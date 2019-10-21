@@ -9,7 +9,7 @@ resource "aws_instance" "test" {
   count = "1"
   tags {
     Name = "aklaas-TFE-test"
-    "billing-id" = "asdf358390"
+    billing-id = "asdf358390"
   }
 }
 
