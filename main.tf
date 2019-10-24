@@ -7,7 +7,7 @@ provider "aws" {
 
 resource "aws_instance" "test" {
   ami = "${var.ami}"
-  instance_type = "t2.micro" // t2.micro 
+  instance_type = "${var.instance_ype}" 
   count = "1"
   
 }
@@ -17,7 +17,7 @@ data "aws_vpc" "default" {
 }
 
 resource "aws_security_group" "private_network_access" {
-  name        = "private_network_access3"
+  name        = "private_network_access4"
   description = "security group for private network access"
   vpc_id      = "${data.aws_vpc.default.id}"
 
